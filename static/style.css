@@ -261,7 +261,7 @@ img {
 }
 
 section {
-    padding: 4rem 0;
+    padding: 5rem 0;
 }
 
 .section-heading {
@@ -269,7 +269,7 @@ section {
     align-items: end;
     justify-content: space-between;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .section-heading h2 {
