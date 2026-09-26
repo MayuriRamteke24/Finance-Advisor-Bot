@@ -19,6 +19,10 @@ def create_app():
     def home():
         return render_template("home.html")
 
+    @app.route("/assistant")
+    def assistant():
+        return render_template("assistant.html")
+
     return app
 
 

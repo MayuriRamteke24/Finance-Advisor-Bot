@@ -13,7 +13,7 @@
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#features">Features</a>
       <a href="#plans">Plans</a>
-      <a href="#assistant">AI</a>
+      <a href="{{ url_for('assistant') }}">AI</a>
     </nav>
 
     <a class="nav-cta primary-btn" href="#plans">Start free</a>
@@ -82,6 +82,7 @@
         <div class="feature-icon">AI</div>
         <h3>AI assistant</h3>
         <p>Get practical suggestions on cutting waste and improving savings habits.</p>
+        <a class="assistant-link" href="{{ url_for('assistant') }}">Open assistant</a>
       </article>
 
       <article class="feature-card">
@@ -107,6 +108,10 @@
         <div class="message bot">
           <span>Cut dining out by 30%, move ₹4,000 to savings, and review recurring subscriptions this week.</span>
         </div>
+      </div>
+
+      <div class="assistant-demo-cta">
+        <a class="secondary-btn" href="{{ url_for('assistant') }}">Open AI assistant</a>
       </div>
     </div>
   </section>

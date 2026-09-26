@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Piyu AI Assistant{% endblock %}
+
+{% block content %}
+<header class="site-header">
+  <div class="navbar container">
+    <a href="{{ url_for('home') }}" class="brand" aria-label="Piyu home page">
+      <span class="brand-mark">P</span>
+      <span>Piyu</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Assistant navigation">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('home') }}#features">Features</a>
+      <a href="{{ url_for('home') }}#plans">Plans</a>
+    </nav>
+
+    <a class="nav-cta primary-btn" href="{{ url_for('home') }}#plans">Start free</a>
+  </div>
+</header>
+
+<main class="assistant-page container">
+  <section class="assistant-hero">
+    <div>
+      <span class="eyebrow">AI assistant</span>
+      <h1>Ask Piyu anything about your money.</h1>
+      <p>
+        Get quick guidance on spending, saving, budgeting, and smarter financial decisions.
+      </p>
+    </div>
+
+    <div class="assistant-summary">
+      <div class="summary-box">
+        <span>Monthly savings</span>
+        <strong>₹14,300</strong>
+      </div>
+      <div class="summary-box">
+        <span>Monthly budget</span>
+        <strong>₹36,000</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="assistant-shell">
+    <aside class="assistant-sidebar">
+      <h2>Quick prompts</h2>
+      <button>Reduce dining spend</button>
+      <button>Plan monthly budget</button>
+      <button>Improve savings rate</button>
+      <button>Track subscriptions</button>
+    </aside>
+
+    <div class="assistant-chat">
+      <div class="chat-header">
+        <span class="ai-badge">Piyu</span>
+        <span class="status-dot"></span>
+        <span class="status-text">online</span>
+      </div>
+
+      <div class="chat-box">
+        <div class="message user">
+          <span>How can I reduce my monthly spending?</span>
+        </div>
+        <div class="message bot">
+          <span>
+            You can cut dining out by 30%, move ₹4,000 to savings, and review recurring subscriptions this week.
+          </span>
+        </div>
+        <div class="message user">
+          <span>What should my budget look like?</span>
+        </div>
+        <div class="message bot">
+          <span>
+            A balanced split is 50% essentials, 30% lifestyle, and 20% savings and investments.
+          </span>
+        </div>
+      </div>
+
+      <div class="chat-input-wrap">
+        <input type="text" value="Ask Piyu about your finances..." aria-label="Ask the AI assistant" />
+        <button class="primary-btn">Send</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>© 2026 Piyu</div>
+    <div>Built for better money habits.</div>
+  </div>
+</footer>
+{% endblock %}
