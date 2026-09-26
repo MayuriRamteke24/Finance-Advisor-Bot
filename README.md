@@ -32,11 +32,13 @@ Then open http://localhost:5000
 
 ## Publish to GitHub Pages
 
+This project is designed for GitHub Pages deployment as a static site. The root page is [index.html](index.html), which GitHub can serve directly without needing Python or Flask runtime.
+
 1. Push this repository to GitHub.
 2. Open the repository settings.
 3. Navigate to Pages.
-4. Set the source to the main branch and root folder, or use the docs folder if you add one later.
-5. Save the settings.
+4. Set the source to the main branch and the root folder `/`.
+5. Save the changes.
 
 Your site will be published at:
 
@@ -44,4 +46,6 @@ https://<your-username>.github.io/<your-repository-name>/
 
 ## Notes
 
-The project includes both a static GitHub Pages homepage and a Flask starter so it can be previewed locally before deployment.
+- The static homepage is GitHub Pages compatible.
+- The Flask app in [app.py](app.py) is kept for local development and testing.
+- A `.nojekyll` file is included so GitHub does not process the site with Jekyll and break the static layout.
