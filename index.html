@@ -26,7 +26,15 @@
           <a href="#process">Process</a>
         </nav>
 
-        <a class="nav-cta primary-btn" href="#plans">Start free</a>
+        <div class="nav-actions">
+          <button type="button" class="theme-toggle" aria-label="Toggle color theme" aria-pressed="false">
+            <span class="theme-toggle-track">
+              <span class="theme-toggle-thumb"></span>
+            </span>
+            <span class="theme-toggle-label">Light</span>
+          </button>
+          <a class="nav-cta primary-btn" href="#plans">Start free</a>
+        </div>
       </div>
     </header>
 
@@ -183,5 +191,41 @@
         <div>Built for better money habits.</div>
       </div>
     </footer>
+
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem('piyu-theme');
+        const preferredTheme = savedTheme || 'light';
+        document.body.setAttribute('data-theme', preferredTheme);
+
+        const syncToggle = () => {
+          const toggle = document.querySelector('.theme-toggle');
+          if (!toggle) return;
+
+          const isDark = document.body.dataset.theme === 'dark';
+          toggle.setAttribute('aria-pressed', String(isDark));
+          toggle.classList.toggle('is-dark', isDark);
+
+          const label = toggle.querySelector('.theme-toggle-label');
+          if (label) {
+            label.textContent = isDark ? 'Dark' : 'Light';
+          }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+          syncToggle();
+
+          const toggle = document.querySelector('.theme-toggle');
+          if (!toggle) return;
+
+          toggle.addEventListener('click', () => {
+            const nextTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+            document.body.setAttribute('data-theme', nextTheme);
+            localStorage.setItem('piyu-theme', nextTheme);
+            syncToggle();
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

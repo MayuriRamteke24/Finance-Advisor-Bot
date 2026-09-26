@@ -13,5 +13,40 @@
   </head>
   <body>
     {% block content %}{% endblock %}
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem('piyu-theme');
+        const preferredTheme = savedTheme || 'light';
+        document.body.setAttribute('data-theme', preferredTheme);
+
+        const syncToggle = () => {
+          const toggle = document.querySelector('.theme-toggle');
+          if (!toggle) return;
+
+          const isDark = document.body.dataset.theme === 'dark';
+          toggle.setAttribute('aria-pressed', String(isDark));
+          toggle.classList.toggle('is-dark', isDark);
+
+          const label = toggle.querySelector('.theme-toggle-label');
+          if (label) {
+            label.textContent = isDark ? 'Dark' : 'Light';
+          }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+          syncToggle();
+
+          const toggle = document.querySelector('.theme-toggle');
+          if (!toggle) return;
+
+          toggle.addEventListener('click', () => {
+            const nextTheme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+            document.body.setAttribute('data-theme', nextTheme);
+            localStorage.setItem('piyu-theme', nextTheme);
+            syncToggle();
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
