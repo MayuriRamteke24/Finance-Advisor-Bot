@@ -422,6 +422,7 @@ section {
     border-radius: 24px;
     padding: 1.5rem;
     box-shadow: 0 18px 38px rgba(124, 77, 255, 0.08);
+    color: var(--text);
 }
 
 .feature-icon {
@@ -433,6 +434,7 @@ section {
     margin-bottom: 1rem;
     font-size: 1.35rem;
     background: linear-gradient(135deg, rgba(124, 77, 255, 0.14), rgba(199, 131, 255, 0.18));
+    color: var(--text);
 }
 
 .feature-card h3,
@@ -524,7 +526,7 @@ section {
 }
 
 .plan-card.popular .plan-price {
-    color: #fff;
+    color: var(--text);
 }
 
 .plan-price strong {
@@ -643,7 +645,7 @@ section {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    color: rgba(245, 243, 255, 0.7);
+    color: var(--muted);
 }
 
 .compact-card {
