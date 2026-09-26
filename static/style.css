@@ -46,10 +46,10 @@ img {
 .site-header {
     position: sticky;
     top: 0;
-    z-index: 20;
-    background: rgba(9, 7, 15, 0.72);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--line);
+    z-index: 30;
+    background: rgba(9, 7, 15, 0.6);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .navbar {
@@ -58,8 +58,20 @@ img {
     padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.nav-shell {
+    width: min(1100px, 100%);
+    display: flex;
+    align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    background: rgba(18, 15, 24, 0.78);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 999px;
+    padding: 0.7rem 1rem 0.7rem 1.1rem;
+    box-shadow: 0 12px 30px rgba(15, 11, 21, 0.3);
 }
 
 .brand {
@@ -86,13 +98,22 @@ img {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 1.4rem;
+    gap: 1.2rem;
     color: rgba(245, 243, 255, 0.76);
-    font-size: 0.96rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.nav-links a {
+    padding: 0.45rem 0.7rem;
+    border-radius: 999px;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .nav-links a:hover {
     color: #fff;
+    background: rgba(255,255,255,0.04);
 }
 
 .nav-cta,
@@ -541,8 +562,41 @@ section {
     font-weight: 700;
 }
 
-.assistant-demo-cta {
-    margin-top: 1.25rem;
+.ai-widget {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 20;
+    width: min(340px, calc(100vw - 24px));
+    background: rgba(17, 12, 26, 0.9);
+    border: 1px solid rgba(157, 123, 255, 0.28);
+    border-radius: 24px;
+    padding: 1rem;
+    box-shadow: 0 22px 50px rgba(13, 8, 19, 0.5);
+    backdrop-filter: blur(16px);
+}
+
+.ai-widget-header {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.8rem;
+}
+
+.ai-widget-body {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.ai-widget .message span {
+    max-width: 92%;
+    font-size: 0.85rem;
+}
+
+.small-btn {
+    width: 100%;
+    margin-top: 0.9rem;
+    padding: 0.7rem 1rem;
 }
 
 .assistant-page {
