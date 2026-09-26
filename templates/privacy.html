@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Piyu Privacy Policy{% endblock %}
+
+{% block content %}
+<header class="site-header">
+  <div class="navbar container">
+    <a href="{{ url_for('home') }}" class="brand" aria-label="Piyu home page">
+      <span class="brand-mark">P</span>
+      <span>Piyu</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Privacy navigation">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('assistant') }}">AI</a>
+      <a href="{{ url_for('terms') }}">Terms</a>
+    </nav>
+
+    <a class="nav-cta primary-btn" href="{{ url_for('home') }}#plans">Start free</a>
+  </div>
+</header>
+
+<main class="legal-page container">
+  <section class="policy-card">
+    <span class="eyebrow">Privacy</span>
+    <h1>Your data stays protected.</h1>
+
+    <div class="policy-text">
+      <p>Piyu values your privacy and only collects the information needed to deliver better financial guidance and product support.</p>
+      <p>We do not sell personal user data. Usage information may be analyzed in aggregate to improve product quality, security, and user experience.</p>
+      <p>We use secure systems and standard protections to keep your information safe and limit unauthorized access.</p>
+      <p>For questions about your data, please contact us at hello@piyu.in.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner footer-grid">
+    <div class="footer-brand">
+      <div class="brand-footer">
+        <span class="brand-mark">P</span>
+        <span>Piyu</span>
+      </div>
+      <p>Built for better money habits.</p>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="{{ url_for('home') }}#features">Features</a></li>
+        <li><a href="{{ url_for('home') }}#plans">Pricing</a></li>
+        <li><a href="{{ url_for('assistant') }}">AI assistant</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="{{ url_for('terms') }}">Terms</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="{{ url_for('privacy') }}">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Piyu</span>
+    <span>hello@piyu.in</span>
+  </div>
+</footer>
+{% endblock %}

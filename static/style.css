@@ -474,6 +474,66 @@ section {
     flex-wrap: wrap;
 }
 
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.footer-brand p,
+.footer ul {
+    margin: 0;
+}
+
+.footer h4 {
+    margin: 0 0 0.8rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #e6d8ff;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 0.55rem;
+}
+
+.footer a {
+    color: rgba(245, 243, 255, 0.75);
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.brand-footer {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 1.2rem auto 0;
+    padding: 1rem 1.5rem 0;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    color: rgba(245, 243, 255, 0.7);
+}
+
+.compact-card {
+    padding: 1.35rem 1.2rem;
+    min-height: 200px;
+}
+
 .assistant-link {
     display: inline-block;
     margin-top: 1rem;
@@ -596,6 +656,57 @@ section {
     background: rgba(255,255,255,0.02);
     color: var(--text);
     padding: 0.9rem 1rem;
+}
+
+.legal-page {
+    padding: 3rem 1.4rem 4rem;
+}
+
+.policy-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(17, 12, 26, 0.9);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    padding: 2.2rem;
+    box-shadow: var(--shadow);
+}
+
+.policy-card h1 {
+    margin: 0.5rem 0 1rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.05em;
+}
+
+.policy-card p {
+    color: var(--muted);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.contact-grid div {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 1rem;
+    background: rgba(255,255,255,0.02);
+}
+
+.contact-grid h3 {
+    margin: 0 0 0.4rem;
+    font-size: 0.9rem;
+    color: #e8d8ff;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.policy-text {
+    display: grid;
+    gap: 0.8rem;
 }
 
 @media (max-width: 900px) {

@@ -68,27 +68,27 @@
   <section id="features" class="container compact-section">
     <div class="section-heading">
       <h2>Simple. Smart. Personal.</h2>
-      <p>Everything you need to manage money clearly and build better habits.</p>
+      <p>Everything needed to track spending, plan smarter, and stay consistent.</p>
     </div>
 
     <div class="feature-grid">
-      <article class="feature-card">
+      <article class="feature-card compact-card">
         <div class="feature-icon">₹</div>
         <h3>Budget overview</h3>
-        <p>See earnings, savings, and expenses in one clean monthly snapshot.</p>
+        <p>See earnings, savings, and expenses in a clean monthly snapshot.</p>
       </article>
 
-      <article class="feature-card" id="assistant">
+      <article class="feature-card compact-card" id="assistant">
         <div class="feature-icon">AI</div>
         <h3>AI assistant</h3>
-        <p>Get practical suggestions on cutting waste and improving savings habits.</p>
+        <p>Get quick suggestions on reducing waste and improving financial habits.</p>
         <a class="assistant-link" href="{{ url_for('assistant') }}">Open assistant</a>
       </article>
 
-      <article class="feature-card">
+      <article class="feature-card compact-card">
         <div class="feature-icon">✓</div>
         <h3>Goal tracking</h3>
-        <p>Keep tabs on savings progress without the extra clutter or complexity.</p>
+        <p>Monitor your progress toward savings goals without extra complexity.</p>
       </article>
     </div>
   </section>
@@ -173,9 +173,46 @@
 </main>
 
 <footer class="footer">
-  <div class="footer-inner">
-    <div>© 2026 Piyu</div>
-    <div>Built for better money habits.</div>
+  <div class="footer-inner footer-grid">
+    <div class="footer-brand">
+      <div class="brand-footer">
+        <span class="brand-mark">P</span>
+        <span>Piyu</span>
+      </div>
+      <p>Built for better money habits.</p>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#plans">Pricing</a></li>
+        <li><a href="{{ url_for('assistant') }}">AI assistant</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Support</h4>
+      <ul>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        <li><a href="#top">Help center</a></li>
+        <li><a href="#top">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="{{ url_for('terms') }}">Terms</a></li>
+        <li><a href="{{ url_for('privacy') }}">Privacy</a></li>
+        <li><a href="{{ url_for('contact') }}">Security</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Piyu</span>
+    <span>hello@piyu.in</span>
   </div>
 </footer>
 {% endblock %}
